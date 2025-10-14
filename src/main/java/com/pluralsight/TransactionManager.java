@@ -38,12 +38,8 @@ public class TransactionManager {
     }
     private void saveTransaction(Transaction t) { // ✅ method correctly placed outside of catch
         try (FileWriter writer = new FileWriter(File_Name, true)) {
-            writer.write(String.join("|",
-                    t.getDate(),
-                    t.getTime(),
-                    t.getDescription(),
-                    t.getVendor(),
-                    String.valueOf(t.getAmount())) + "\n");
+            writer.write(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" +
+                    t.getVendor() + "|" + t.getAmount() + "\n");
         } catch (IOException e) {
             System.out.println("Error saving transaction: " + e.getMessage());
         }

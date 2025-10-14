@@ -8,18 +8,28 @@ public class Ledger {
         this.manager = manager;
     }
     public void showALl(){
-        printList(manager.getTransactions());
+        printTransactions(manager.getTransactions());
     }
-    public void showDeposits(){
-        printList(manager.getTransactions());
+    public void showSales(){
+        printTransactions(manager.getTransactions().stream()
+                .filter(t -> t.getAmount() > 0)
+                .toList());
     }
-    public void showPayments(){
-        printList(manager.getTransactions()
+    public void showPurchases(){
+        printTransactions(manager.getTransactions()
                 .stream()
                 .filter(t -> t.getAmount() < 0)
-                .collect(Collectors.toList()));
+                .toList());
     }
-    private void printList(List<Transaction>list){
+    private void printTransactions(List<Transaction>list){
+        if (list.isEmpty()){
+            System.out.println("No Transactions found.");
+            return;
+        }
+        System.out.println("\nDate | Time | Description | Vendor | Amount");
+        System.out.println("--------------------------------------------");
+
+
         list.stream()
                 .sorted((a, b) -> b.getDate().compareTo(a.getDate()))
                 .forEach(System.out::println);

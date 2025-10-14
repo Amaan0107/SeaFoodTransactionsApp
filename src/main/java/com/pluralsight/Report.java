@@ -1,43 +1,66 @@
 package com.pluralsight;
 import  java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import  java.util.stream.Collectors;
 
 public class Report {
     private final List<Transaction> transactions;
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     public Report(List<Transaction> transactions){
         this.transactions = transactions;
     }
-    public void monthToDate(){
+    public void todaySummary(){
         LocalDate today = LocalDate.now();
-        LocalDate start = today.withDayOfMonth(1);
-        printBetween(start, today);
+        showSummary(today, today, "Today's Summary");
     }
-    public void previousMonth(){
-        LocalDate today = LocalDate.now();
-        LocalDate start = today.minusMonths(1).withDayOfMonth(1);
-        LocalDate end = today.withDayOfMonth(1).minusDays(1);
-        printBetween(start, end);
+    public void thisMonth(){
+        LocalDate start = LocalDate.now().withDayOfMonth(1);
+        LocalDate end = LocalDate.now();
+        showSummary(start, end, "This months Summary");
     }
-    private void yearToDate(){
-        LocalDate today = LocalDate.now();
-        LocalDate start = today.withDayOfYear(1);
-        printBetween(start, today);
+    public void thisYear() {
+        LocalDate start = LocalDate.now().withDayOfYear(1);
+        LocalDate end = LocalDate.now();
+        showSummary(start, end, "This Year’s Summary");
     }
-    private void printBetween(LocalDate start, LocalDate end){
-        transactions.stream()
-                .filter(t -> {
-                    LocalDate d = LocalDate.parse(t.getDate(), formatter);
-                    return !d.isBefore(start) && !d.isAfter(end);
-                })
-                .forEach(System.out::println);
+
+    public void searchByVendor(String vendor) {
+        System.out.println("\nTransactions for vendor: " + vendor);
+        System.out.println("------------------------------------------------------");
+        boolean found = false;
+
+        for (Transaction t : transactions) {
+            if (t.getVendor().equalsIgnoreCase(vendor)) {
+                System.out.println(t);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No transactions found for that vendor.");
+        }
     }
-    public void searchByVendor(String vendor){
-        transactions.stream()
-                .filter(t -> t.getVendor().equalsIgnoreCase(vendor))
-                .forEach(System.out::println);
+
+    private void showSummary(LocalDate start, LocalDate end, String title) {
+        double sales = 0, purchases = 0;
+
+        for (Transaction t : transactions) {
+            LocalDate date = LocalDate.parse(t.getDate());
+            if ((date.isEqual(start) || date.isAfter(start)) &&
+                    (date.isEqual(end) || date.isBefore(end))) {
+
+                if (t.getAmount() > 0) sales += t.getAmount();
+                else purchases += t.getAmount();
+            }
+        }
+
+        double net = sales + purchases;
+
+        System.out.println("\n----------------- " + title + " --------------------");
+        System.out.println("Period: " + start + " to " + end);
+        System.out.println("Total Sales: $" + String.format("%.2f", sales));
+        System.out.println("Total Purchases: $" + String.format("%.2f", purchases));
+        System.out.println("Net Profit: $" + String.format("%.2f", net));
+        System.out.println("------------------------------------------------------");
     }
 }
