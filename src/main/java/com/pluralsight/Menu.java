@@ -96,7 +96,7 @@ public class Menu {
                 case "2" -> report.thisMonth();
                 case "3" -> report.thisYear();
                 case "4" -> {
-                    System.out.println("Enter Vendor name:");
+                    System.out.print("Enter Vendor name:");
                     String vendor = scanner.nextLine();
                     report.searchByVendor(vendor);
                 }
