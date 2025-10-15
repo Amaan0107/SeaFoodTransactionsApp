@@ -9,6 +9,7 @@ public class Report {
     public Report(List<Transaction> transactions){
         this.transactions = transactions;
     }
+    //Predefined Reports
     public void todaySummary(){
         LocalDate today = LocalDate.now();
         showSummary(today, today, "Today's Summary");
@@ -23,14 +24,14 @@ public class Report {
         LocalDate end = LocalDate.now();
         showSummary(start, end, "This Year’s Summary");
     }
-
+    //Vendor search
     public void searchByVendor(String vendor) {
         System.out.println("\nTransactions for vendor: " + vendor);
         System.out.println("------------------------------------------------------");
         boolean found = false;
 
         for (Transaction t : transactions) {
-            if (t.getVendor().equalsIgnoreCase(vendor)) {
+            if (t.getVendor().equalsIgnoreCase(vendor)) { //Case-insensitive
                 System.out.println(t);
                 found = true;
             }
@@ -40,7 +41,7 @@ public class Report {
             System.out.println("No transactions found for that vendor.");
         }
     }
-
+    //Helper: Summaries
     private void showSummary(LocalDate start, LocalDate end, String title) {
         double sales = 0, purchases = 0;
 

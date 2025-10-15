@@ -8,6 +8,7 @@ public class Menu {
     private final TransactionManager manager = new TransactionManager();
     private final Ledger ledger = new Ledger(manager);
 
+    //Shows main menu
     public void showMenu(){
         while(true){
             System.out.println("\n--------------- SeaFood Tracker ------------------");
@@ -33,6 +34,7 @@ public class Menu {
             }
         }
     }
+    //Adding Transaction
     private void addTransaction(boolean isSale){
         System.out.print("Enter Description: ");
         String description = scanner.nextLine();
@@ -40,7 +42,7 @@ public class Menu {
         String vendor = scanner.nextLine();
         System.out.print("Enter amount:");
         double amount = Double.parseDouble(scanner.nextLine());
-
+        //Buying stored as negative
         if (!isSale) amount *= -1;
 
         Transaction t = new Transaction(
@@ -56,6 +58,7 @@ public class Menu {
         else
             System.out.println("Purchase recorded successfully!");
     }
+    //Ledger Menu
     private void ledgerMenu(){
         while (true){
             System.out.println("\n---------------- Ledger menu ----------------");
@@ -78,6 +81,7 @@ public class Menu {
             }
         }
     }
+    //Report menu
     private void reportMenu(){
         Report report = new Report(manager.getTransactions());
         while (true){
