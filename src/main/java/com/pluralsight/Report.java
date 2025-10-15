@@ -1,7 +1,7 @@
 package com.pluralsight;
 import  java.time.LocalDate;
 import java.util.List;
-import  java.util.stream.Collectors;
+
 
 public class Report {
     private final List<Transaction> transactions;

@@ -1,6 +1,6 @@
 package com.pluralsight;
 import java.util.*;
-import java.util.stream.Collectors;
+
 public class Ledger {
     private final TransactionManager manager;
 
