@@ -1,13 +1,22 @@
-## 🎣SeaFood Restaurant Transaction Tracker-app🍽️
+# 🎣SeaFood Restaurant Transaction Tracker-app🍽️
+
 CapStone-1 YUU LTCA Academy.
 Using Object oriented programing I was able to understand more about organnizing my code based on real world things such as transactions, vendors, and users.
 
+---
 
 ## Project overview 📑
 This is a Application that tracks Purchases and sales by prompting the user to enter every transaction. It also able to maintain a ledger of all the transactions and can generate a report based on the user input.
 
+---
 
-## Featues  
+## 🚀 Features
+- 💵 Add purchase or transaction
+- 📄 View Ledger
+- 🔍 Search Report 
+- 👤 Search by vendor
+
+---    
 # Main menu
 1) Add Sale
 2) Add Purchase
