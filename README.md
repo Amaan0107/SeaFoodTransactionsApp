@@ -4,12 +4,12 @@ Using Object oriented programing I was able to understand more about organizing 
 
 ---
 
-## Project overview 📑
+### Project overview 📑
 This is a application that tracks Purchases and sales by prompting the user to enter every transaction. It is also able to maintain a ledger of all the transactions and can generate a report based on the user input.
 
 ---
 
-## 🚀 Features
+### 🚀 Features
 - 💵 Add purchase or transaction
 - 📄 View Ledger
 - 🔍 Search Report 
@@ -17,13 +17,13 @@ This is a application that tracks Purchases and sales by prompting the user to e
 
 ---  
 
-# Favorite or Most interesting code:
+## Favorite or Most interesting code:
 <img width="305" height="68" alt="Screenshot 2025-10-16 085122" src="https://github.com/user-attachments/assets/75417532-1b08-4432-92e9-c76fc4f890fb" />
 This was my favorite line of code due to the fact that it's simple (just differs from positive and negative transactions) but it made a huge difference by allowing me to sum everything directly when generating my report.
 
 ---  
 
-## Tech Stack
+### Tech Stack
 Java 17, IntelliJ IDEA, CSV File Storage, Object-Oriented Programming Principles
 
 ---
@@ -48,5 +48,13 @@ Java 17, IntelliJ IDEA, CSV File Storage, Object-Oriented Programming Principles
 
 ---  
 
-## Transaction.csv
+### Transaction.csv
 <img width="1279" height="187" alt="Screenshot 2025-10-16 085150" src="https://github.com/user-attachments/assets/8a41ff1e-aff3-4805-ba21-05de9b73a1c2" />
+
+---
+
+## Pictures of code 
+### Ledger 
+<img width="1796" height="905" alt="Screenshot 2025-10-16 101625" src="https://github.com/user-attachments/assets/5e38d8dd-9b83-4428-8ed6-2e11e7281209" />
+### Report
+<img width="1806" height="910" alt="Screenshot 2025-10-16 101716" src="https://github.com/user-attachments/assets/c5cadf04-e973-455b-9d46-d5841b8945d4" />
