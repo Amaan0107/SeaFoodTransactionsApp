@@ -56,5 +56,6 @@ Java 17, IntelliJ IDEA, CSV File Storage, Object-Oriented Programming Principles
 ## Pictures of code 
 ### Ledger 
 <img width="1796" height="905" alt="Screenshot 2025-10-16 101625" src="https://github.com/user-attachments/assets/5e38d8dd-9b83-4428-8ed6-2e11e7281209" />
+
 ### Report
 <img width="1806" height="910" alt="Screenshot 2025-10-16 101716" src="https://github.com/user-attachments/assets/c5cadf04-e973-455b-9d46-d5841b8945d4" />
