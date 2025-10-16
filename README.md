@@ -1,6 +1,6 @@
 # 🎣SeaFood Restaurant Transaction Tracker-app🍽️
 CapStone-1 YUU LTCA Academy.
-Using Object oriented programing I was able to understand more about organizing my code based on real world things such as transactions, vendors, and users.
+Using Object oriented programing I was able to understand more about organizing my code based on real world entites such as transactions, vendors, and users.
 
 ---
 
