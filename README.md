@@ -1,4 +1,4 @@
-# Capstone-1
+# 🎣SeaFood Restaurant Transaction Tracker-app🍽️
 Sea food restaurant financial transactions. 
 # First menu 
 1) Add Sale
