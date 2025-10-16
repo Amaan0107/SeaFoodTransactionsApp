@@ -23,18 +23,23 @@ This was my favorite line of code due to the fact that it's simple (just differs
 
 ---  
 
-## Main menu
+## Tech Stack
+Java 17, IntelliJ IDEA, CSV File Storage, Object-Oriented Programming Principles
+
+---
+
+### Main menu
 1) Add Sale
 2) Add Purchase
 3) View Ledger
 4) Reports
 5) Exit
-## Ledger Menu
+### Ledger Menu
 1) All Transactions
 2) Sales Only
 3) Purchases Only
 4) Back to Main Menu
-## Reports menu
+### Reports menu
 1) Today’s Summary
 2) This Month
 3) This Year
@@ -43,5 +48,5 @@ This was my favorite line of code due to the fact that it's simple (just differs
 
 ---  
 
-# Transaction.csv
+## Transaction.csv
 <img width="1279" height="187" alt="Screenshot 2025-10-16 085150" src="https://github.com/user-attachments/assets/8a41ff1e-aff3-4805-ba21-05de9b73a1c2" />
